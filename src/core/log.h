@@ -64,9 +64,11 @@ public:
 
         switch (_log_level) {
             case log::Level::Debug:
+                return;
                 set_color(Color::Green);
                 break;
             case log::Level::Info:
+                return;
                 set_color(Color::Blue);
                 break;
             case log::Level::Warn:
