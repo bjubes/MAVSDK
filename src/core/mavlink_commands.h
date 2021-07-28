@@ -1,4 +1,5 @@
 #pragma once
+#define ARDUPILOT
 
 #include "mavlink_include.h"
 #include "locked_queue.h"
