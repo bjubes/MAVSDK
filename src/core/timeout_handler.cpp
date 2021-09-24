@@ -35,7 +35,7 @@ void TimeoutHandler::refresh(const void* cookie)
 
     auto it = _timeouts.find(const_cast<void*>(cookie));
     if (it != _timeouts.end()) {
-        dl_time_t future_time = _time.steady_time_in_future(it->second->duration_s);
+        dl_time_t future_time = _time.steady_time_in_future(it->second->duration_s * 2);
         it->second->time = future_time;
     }
 }
